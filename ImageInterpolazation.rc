@@ -1,0 +1,301 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\ImageInterpolazation.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\icon1.ico"
+IDI_Author              ICON    DISCARDABLE     "res\\me.ico"
+IDI_DISPLAYER           ICON    DISCARDABLE     "res\\displayer.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 168, 53
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 ImageInterpolazation"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,9,14,20,20
+    LTEXT           "ImageInterpolationToolkit V1.0",IDC_STATIC,35,9,123,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 赵丽丽 ",IDC_STATIC,33,21,85,8,
+                    SS_CENTERIMAGE,WS_EX_RIGHT
+    DEFPUSHBUTTON   "确定",IDOK,120,25,36,16,BS_CENTER | BS_VCENTER | 
+                    WS_GROUP,WS_EX_STATICEDGE
+    LTEXT           " (VR Lab., BUAA) 2010 ",IDC_STATIC,33,33,84,10,
+                    SS_CENTERIMAGE,WS_EX_RIGHT
+    GROUPBOX        "",IDC_STATIC,6,0,154,47,BS_CENTER
+END
+
+IDD_IMAGEINTERPOLAZATION_DIALOG DIALOGEX 0, 0, 217, 92
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE | WS_EX_APPWINDOW
+CAPTION "ImageInterpolazation"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "open",IDC_BTOPENFILE,167,10,38,16,BS_CENTER | 
+                    BS_VCENTER,WS_EX_STATICEDGE
+    GROUPBOX        "interpolation",IDC_STATIC,10,9,92,70
+    CONTROL         "BiLinear",IDC_RadioBiLinear,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,17,42,77,14
+    CONTROL         "Cubic Convolution",IDC_RadioBicubic,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,17,60,79,14
+    PUSHBUTTON      "interpo",IDC_BTINTERPOLATE,167,29,38,16,BS_CENTER | 
+                    BS_VCENTER,WS_EX_STATICEDGE
+    PUSHBUTTON      "save",IDC_BTSAVE,167,67,38,16,BS_CENTER | BS_VCENTER,
+                    WS_EX_STATICEDGE
+    GROUPBOX        "zoom",IDC_STATIC,110,9,45,70
+    CONTROL         "x2",IDC_RADIOZOOM2,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,118,25,32,13
+    CONTROL         "x3",IDC_RADIOZOOM3,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,118,43,30,13
+    CONTROL         "x4",IDC_RADIOZOOM4,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,118,61,34,13
+    PUSHBUTTON      "gray",IDC_GRAY,167,48,38,16,BS_CENTER | BS_VCENTER,
+                    WS_EX_STATICEDGE
+    CONTROL         "Nearest Neighbor",IDC_RadioNearestNeighbor,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,18,24,77,14
+END
+
+IDD_ORGIMG DIALOG DISCARDABLE  0, 0, 187, 101
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+CAPTION "original image"
+FONT 10, "System"
+BEGIN
+    CONTROL         "",IDC_ORGIMG,"Static",SS_BLACKFRAME,7,7,173,87
+END
+
+IDD_INTERPOLATEDIMG DIALOG DISCARDABLE  0, 0, 187, 100
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_VSCROLL | 
+    WS_HSCROLL | WS_SYSMENU | WS_THICKFRAME
+CAPTION "interpolated image"
+FONT 10, "System"
+BEGIN
+    CONTROL         "",IDC_INTERPOLATEDIMG,"Static",SS_BLACKFRAME,7,7,165,78
+END
+
+IDD_SAVEFILEDLG DIALOG DISCARDABLE  0, 0, 187, 99
+STYLE WS_CHILD
+FONT 10, "System"
+BEGIN
+END
+
+IDD_DIALOGCLOSE DIALOG DISCARDABLE  0, 0, 163, 66
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Image Match on Sift"
+FONT 10, "黑体"
+BEGIN
+    DEFPUSHBUTTON   "Yes",IDOK,19,33,29,14
+    PUSHBUTTON      "Cancel",IDCANCEL,113,33,29,14
+    LTEXT           "图像即将关闭，是否保存当前图像？",IDC_STATIC,20,13,121,
+                    14,SS_CENTERIMAGE
+    PUSHBUTTON      "No",IDC_BUTTONNO,66,33,29,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "ImageInterpolazation Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "ImageInterpolazation\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2010\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "ImageInterpolazation.EXE\0"
+            VALUE "ProductName", "ImageInterpolazation 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 161
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 46
+    END
+
+    IDD_IMAGEINTERPOLAZATION_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 85
+    END
+
+    IDD_ORGIMG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 94
+    END
+
+    IDD_INTERPOLATEDIMG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 172
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 85
+    END
+
+    IDD_SAVEFILEDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 92
+    END
+
+    IDD_DIALOGCLOSE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 156
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 58
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 ImageInterpolazation(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\ImageInterpolazation.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
