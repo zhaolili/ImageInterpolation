@@ -1,0 +1,1 @@
+It interpolates image size with three interpolation methods: Nearest Neighbor, Bilinear and Bicubic convertion.
